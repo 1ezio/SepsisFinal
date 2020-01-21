@@ -1,3 +1,12 @@
+body{
+    background: url(/static/img/lab.jpg) no-repeat ;
+    min-height: calc(100vh- 138px);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
 *{
     margin: 0;
     padding: 0;
@@ -51,7 +60,7 @@ h1{
 }
 
 body{
-    background: url(/static/img/lab.jpg) no-repeat ;
+    background: url(/static/img/bgm1.jpg) no-repeat ;
     min-height: calc(100vh- 138px);
     background-size: cover;
     background-position: center;
@@ -61,6 +70,16 @@ body{
   
 }
 
+#bg{
+    background: url(/static/img/bgm2.jpg) no-repeat ;
+    min-height: calc(100vh- 138px);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    filter: blur(5px);
+}
 
 
 /*.trans{
@@ -78,3 +97,29 @@ footer{
     padding-left: 30%;
     padding-right: 30%;
 }
+
+#frm{
+    font-size: 25px;
+}
+
+#bg{
+    background: url(/static/img/doc.jpg) no-repeat ;
+    min-height: calc(100vh- 138px);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    opacity: 0.3;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px) !important;
+    
+}
+
+
+input [value="Submit"]{
+    font-size: 150%;
+    align-items: center;
+    justify-content: center;
+}
+

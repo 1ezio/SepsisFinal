@@ -1,9 +1,57 @@
 *{
     margin:0;
     padding:0;
+    text-decoration: none;
+}
+
+.bg{
+    border-radius: 40px;
+    -webkit-box-shadow: 0px 0px 26px 13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 26px 13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 26px 13px rgba(0,0,0,0.75);
+    color: #000000;
+}
+
+.bg1{
+    border-radius: 40px;
+    -webkit-box-shadow: 0px 0px 26px 13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 26px 13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 26px 13px rgba(0,0,0,0.75);
+    color: #000000;
+}
+
+.bg-purp{
+    background-color: rebeccapurple ;
+    opacity: 0.9;
+    
+}
+
+.bg-grn{
+    background-color: #24ff66;
+    opacity: 0.9;
+    
+}
+.crd{
+    border-radius: 20% !important;
+
 }
 
 
+
+.bg {
+   font-weight: bolder;
+}
+.bg-grn:hover{
+    background-color: #8377d1  ;
+}
+.bg-purp:hover{
+    background-color: #24ff66 ;
+}
+
+
+
+
+/*FOR MOBILE*/
 @media screen and (max-width: 576px) {
     #sep{display: none;}
 
@@ -19,11 +67,14 @@
     }
 
     .title{
-        -webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
+        /*-webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
         border-radius: 40px;
-        font-size: 3.1rem;
+        font-size: 3.1rem;*/
+        font-size: 90px;
+        font-weight: bolder;
+
         margin-bottom: 35px !important;
     }
     .under{
@@ -34,7 +85,7 @@
         border-radius: 30px;
         color: #ffffff;
         font-weight: 550;
-            
+
     }
     /*.max-height{
         min-height: 60vh;
@@ -46,18 +97,8 @@
     }*/
     
     
-@media screen and (min-width: 576px) {
-        #search{display: none;}
-    
-    }
 
 
-@media screen and (min-width:768px){
-footer{/*REMOVE THIS PIECE OF CODE AFTER ADDING SOMETHING TO THE PAGE */
-    position: relative;
-    
-}
-}
 #NAVBAR{
     position: sticky;
 }
@@ -78,9 +119,7 @@ footer{/*REMOVE THIS PIECE OF CODE AFTER ADDING SOMETHING TO THE PAGE */
     font-weight: 550;
     font-size: large;
 }
-.bg-grn{
-    background-color: #24ff66;
-}
+
 .ban-btn{
     min-width: 135px;
     padding:3px;
@@ -118,15 +157,11 @@ footer{/*REMOVE THIS PIECE OF CODE AFTER ADDING SOMETHING TO THE PAGE */
     box-shadow: -1px 10px 31px -13px rgba(0,0,0,0.75);
 
 }
-.bg-purp{
-    background-color: rebeccapurple ;
-    align-content: center;
-    
-}
-.title{
+
+/*.title{
     border-radius: 40px;
 
-}
+}*/
 .title > strong{
     -webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
@@ -134,8 +169,10 @@ footer{/*REMOVE THIS PIECE OF CODE AFTER ADDING SOMETHING TO THE PAGE */
     border-radius: 40px;
 
 }
-
-
+a {
+    text-decoration: none;
+}
+/*FOR TAB AND DESKTOP*/
 @media screen and (min-width: 576px){
 
     .banner-link{width:100% ;}
@@ -158,13 +195,13 @@ footer{/*REMOVE THIS PIECE OF CODE AFTER ADDING SOMETHING TO THE PAGE */
     }
 
 
-    .title > strong{
+    /*.title > strong{
         -webkit-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 31px 11px rgba(0,0,0,0.75);
         border-radius: 40px;
 
-    }
+    }*/
     .ban-btn:hover{
         background-color: #8377d1 ;
         border-radius: 40px;
@@ -176,13 +213,10 @@ footer{/*REMOVE THIS PIECE OF CODE AFTER ADDING SOMETHING TO THE PAGE */
         min-height:calc(100vh - 138px);
         background: url(/static/img/gen-bg.jpg);
         background-size: cover;
-        background-position: center;
+        background-position: top;
         background-attachment: fixed;
         background-repeat: no-repeat;
         position: relative;
     }
 }
 
-.slide-and-fade-and-spin {
-    @include mui-animation(slide, fade, spin(120deg));
-  }

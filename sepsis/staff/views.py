@@ -110,7 +110,7 @@ def test(request):
             
 
             if (answer > 0.045 ):
-                print (" You May Hav Sepsis")
+                print (" You May Have Sepsis")
                 message="You Have Sepsis"
                 return render(request,"test.html",{"msg":message})
             

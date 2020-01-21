@@ -59,14 +59,62 @@
      <div class="container">
          <div class="row text-center" id="head">
              <div class="justify-content-center ">
-      <h1 class="display-2 btn-warning text-center px-4 justify-content-center "> {% trans "Welcome" %} {{e}}</h1> <br>
-          <button type="button" onclick="location.href='{% url 't' %}'" class="btn btn-dark btn-large px-5 border border-primary " id="btk">SIRS </button>
+      <h1 class="display-2 btn-warning text-center px-4 justify-content-center mb-4"> {% trans "Welcome" %} {{e}}</h1> <br>
+         <!-- <button type="button" onclick="location.href='{% url 't' %}'" class="btn btn-dark btn-large px-5 border border-primary " id="btk">SIRS </button>-->
           </div>
     </div>
 </div>
+<!--CARDS-->
+<div class="row justify-content-around text-center mx-sm-auto my-4 col-12 card-bg">
+    <!--<a href="prevention" class="text-purp btn bg-grn mx-2 px-3 py-2 my-3 ban-btn col-lg-3 col-md-6">{% trans "PREVENTIONS" %}</a>
+    <a href="#" class="text-purp btn bg-grn mx-2 px-2 py-2 my-3 ban-btn col-lg-2 col-md-6">{% trans "CURE" %}</a>
+    <a href="#" class="text-purp btn bg-grn mx-2 px-2 py-2 my-3 ban-btn col-lg-2 col-md-6">{% trans "SIRS" %}</a>
+    <a href="#" class="text-purp btn bg-grn mx-2 px-2 py-2 my-3 ban-btn col-lg-3 col-md-6">{% trans "SOFA" %}</a>
+    -->
+  <!--1st CARD-->
+    <a href="#" style="text-decoration: none;">
+      <div class="card bg px-3 pt-1  mx-sm-auto my-3 bg-grn" style="width: 20rem;">
+      <img class="card-img p-1 border rounded mb-5 crd" src="{% static '\img\syringe-card1.jpg'%}" alt="Card image cap"></span>
+      <div class="card-body">
+        <h3 class="card-title text-dark">{% trans "PREVENTIONS" %}</h3>
+        <!--<p class="card-text">Lorem ipsum dolor sit amet.</p>-->
+      </div>
+    </div>
+  </a>
+    <!--2nd CARD-->
+    <a href="#" style="text-decoration: none;">
+    <div class="card bg px-3 pt-1 mx-sm-auto my-3 bg-grn" style="width: 20rem;">
+      <img class="card-img p-1 border  rounded crd" src="{% static '\img\cure1.jpg'%}" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title text-dark ">{% trans "CURE" %}</h3>
+        <!--<p class="card-text">Lorem ipsum dolor sit amet.</p>-->
+      
+      </div>
+    </div></a>
+    <!--3rd CARD-->
+    <a href="#" style="text-decoration: none;" onclick="location.href='{% url 't' %}'"   >
+    <div class="card bg px-3 pt-1 mx-sm-auto my-3 bg-grn" style="width: 20rem;">
+       <img class="card-img p-1 border rounded mb-5 crd" src="{% static '\img\sirs.jpg'%}" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title text-dark">{% trans "SIRS" %}</h3>
+        <!--<p class="card-text">Lorem ipsum dolor sit amet.</p>-->
+      </div>
+    </div></a>
+    <!--4th CARD-->
+    <a href="#" style="text-decoration: none;">
+    <div class="card bg px-3 pt-1 mx-sm-auto my-3 bg-grn" style="width: 20rem; ">
+        <img class="card-img p-1 border rounded crd" src="{% static '\img\cure1.jpg'%}" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title text-dark">{% trans "SOFA" %}</h3>
+        <!--<p class="card-text">Lorem ipsum dolor sit amet.</p>-->
+      
+      </div>
+    </div></a>
+  <!--CARDS ENDS-->
+    </div>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <!--~~~~~~~~~~~~~~~FOOTER-HERE~~~~~~~~~~~~-->
 <footer class="footer text-center bg-dark text-light p-4">
     <p>@CopyRight 2020 SIH SourceDeCode</p>
@@ -79,7 +127,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-   <script src="{% static '/js/login.js' %}"></script>
 </body>
 
 </html>

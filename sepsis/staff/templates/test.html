@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+{% load static %}
 {% load i18n %}
 {% if msg %}
 <script>
@@ -6,63 +7,134 @@
 </script>
 {% endif %}
 <style >
-    h1{text-align: center;
+    h1{ text-align: center;
     color: azure;
-    background-color: cornflowerblue;}
-    body{display: block;
-    margin: 30;}
-    .button {
-  background-color:#f44336;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
+    background-color: cornflowerblue;
+}
+    body{/*display: block;*/
+   
 }
 </style>
-<body>
-    <h1 >SIRS</h1>
-<form method="POST" action=""> 
-    {% csrf_token %}
-    
-    <div>
-        {% trans "Age:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.Age}}<hr/>
-    </div>
-    <br>
-    <div>
-   
-        {% trans "HR:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.HR}}<hr/>
-    </div> 
-    <br>
-    <div>
-        {% trans "O2Sat:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.O2Sat}}<hr/><br>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SIRS-TEST-Sepsis</title>
         
-    </div> 
-    <br>
-    <div>
-        {% trans "Temp:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.Temp}}<hr/>
-    </div>
-    <br> 
-    <div>
-        {% trans "SBP:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.SBP}}<hr/>
-
-    </div> 
-    <br>
-    <div>
-        {% trans "DBP:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.DBP}}<br><hr/></div>
-    </div> 
-    <br>
-    <div>
-        {% trans "Resp:" %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{form.Resp}}
-        <hr/>
-    </div> 
-    get your report on msg 
-    enter mobile no. <input type="number" name="no"  placeholder="+91 97845****12" required>
     
-<input class="button" type="submit" value="submit"/>
-</form>
+    
+<!--BOOTSTRAP CSS**********************************************-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+    
+<!--CUSTOM CSS**********************************************-->
+        <link rel="stylesheet" href="{% static '/css/test.css' %}">
+        <link rel="stylesheet" href="{% static '/css/welcome.css' %}">
+    
+    
+<!--FAVICON**********************************************-->
+        <link rel="icon" href="{% static '/img/favicon.ico ' %}" >
+    
+<!-- FONT AWESOME********************************************** -->
+      <link rel="stylesheet" href="{% static '/css/all.css' %}">
+      <!--END OF HEAD**************************************************************************************-->
+    </head>
+    
+    
+<body>    
+        <!--BODY-->
+        <!--NAVIGATION BAR-->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-3">
+            <a href="#" class="navbar-brand"><img src="{% static '/img/favicon512.png' %}" alt="BrandLogo" width="48px" height="auto"/>&nbsp; {% trans "SLAY-SEPSIS" %}</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-right" id="navbarMenu">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item btn-secondary p-2 px-4" >
+                        <button type="button" onclick="location.href= '{% url 'logo' %}'">
+                        Logout
+                    </button>
+                    </li>
+            </div>
+        </nav> 
+        <nav  aria-label="breadcrumb" >
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/index (3) .html" target="_blank">{% trans "Home" %}</a></li>
+              <li class="breadcrumb-item"><a href="/docsignIn.html" target="_blank">{% trans "Login" %}</a></li>
+              <li class="breadcrumb-item active">{% trans "SIRS-Test" %}</li>
+            </ol>
+          </nav >
+    <!--~~~~~~~~~~~NAVIGATION BAR ENDS~~~~~~~~~~-->
+    
 
+    <h1 class="display-3 font-weight-bold" >SIRS</h1>
+    <div class="container p-3">
+<form method="POST" action="" class="font-weight-bold form-group table" id="frm"> 
+    {% csrf_token %}
+
+<!--AGE OF PATIENT-->
+    <div class="bg-secondary  p-3 border rounded ">
+       <label for="" class="bg-priamry"> {% trans "Age:" %}</label> <div class=" form-control"> {{form.Age}}</div>
+    </div>
+<br>
+<!--HEAR-RATE-->
+    <div class="bg-secondary  p-3  border rounded ">
+        <label for="" class="bg-priamry">{% trans "Heart Rate:" %}</label><div class=" form-control">{{form.HR}}</div>
+    </div> 
+<br>
+<!--O2SATURATION-->
+    <div class="bg-secondary p-3  border rounded ">
+        <label for="" class="bg-priamry">{% trans "O<sub>2</sub>Sat:" %}</label><div class=" form-control">{{form.O2Sat}}</div>
+    </div> 
+<br>
+<!--Body Tempearature-->
+    <div class="bg-secondary p-3 border rounded  ">
+        <label for="" class="bg-priamry">{% trans "Body Tempearature:" %}</label><div class=" form-control">{{form.Temp}}</div>
+    </div>
+<br>
+<!--SYSTOLIC B.P.:-->    
+    <div class="bg-secondary p-3 border rounded  ">
+        <label for="" class="bg-priamry">{% trans "Systolic B.P.:" %}</label><div class=" form-control">{{form.SBP}}</div>
+    </div> 
+<br>
+<!--DIASTOLIC B.P.-->    
+    <div class="bg-secondary p-3 border rounded  ">
+        <label for="" class="bg-priamry">{% trans "Diastolic B.P.:" %}</label><div class=" form-control">{{form.DBP}}</div>
+    </div> 
+<br>
+<!--RESPIRATION RATE-->
+    <div class="bg-secondary p-3 border rounded  ">
+        <label for="" class="bg-priamry"> {% trans "Respiration Rate:" %}</label><div class=" form-control ">{{form.Resp}}</div>
+    </div> 
+<br>
+<!--MESSAGE FUNCTIONALITY-->
+    <div class="bg-secondary p-3 pb-5 font-weight-bold  border rounded  "> 
+    Get your report on msg 
+    enter mobile no. : &nbsp;<input type="tel" name="no"  placeholder="+91 97845****12" required><br>
+    <br>
+<!--SUBMIT-BUTTON-->
+<input class="button btn btn-primary  px-5 font-weight-bold py-3" type="submit" value="Submit"/>
+
+</div>
+</form>
+</div>
+
+<!--~~~~~~~~~~~~~~~FOOTER-HERE~~~~~~~~~~~~-->
+<footer class="footer text-center bg-dark text-light p-4">
+    <p>@CopyRight 2020 SIH SourceDeCode</p>
+</footer></div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <!--CUSTOM JS-->
+        <script src="{% static '/js/test.js'%}"></script>
 </body>
+
+</html>

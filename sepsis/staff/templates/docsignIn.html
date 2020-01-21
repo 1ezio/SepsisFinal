@@ -37,34 +37,30 @@
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse nav-right" id="navbarMenu">
-            <ul class="navbar-nav ml-auto ">
-                <li class="nav-item mx-3 dropdown color_ ">
-                    
-                    <div class="dropdown color_">
-                        <a class="btn text-secondary font-weight-bolder color_" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <p class="font-weight-bolder color_"><i class="fas fa-sign-in-alt"></i>&nbsp;{% trans "Doctor" %}</p>
+            <div class="collapse navbar-collapse nav-right" id="navbarMenu">
+                <ul class="navbar-nav ml-auto ">
+                  <li class="nav-item mx-3 dropdown">
+                        <a class="btn text-secondary  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {% trans "Doctor" %}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <button  type="button" onclick="location.href='{% url 'signIn' %}'" class="dropdown-item" >{% trans "Login" %}</button>
+                        <button type="button" onclick="location.href='{% url 'signIn' %}'" class="dropdown-item">{% trans "Login" %}</button>
                         <div class="dropdown-divider"></div>
-                        <button type="button" onclick="location.href='{% url 'signup' %}'"class="dropdown-item" >{% trans "Registration" %}</button>
+                        <button type="button" onclick="location.href='{% url 'signup' %}'" class="dropdown-item" >{% trans "Registration" %}</button>
                         </div>
-                      </div>
                 </li>
                 <li class="nav-item" id="sep"> <a href="#" class="nav-link">|</a></li>
-                <li class="nav-item mx-3 ">
-                    <div class="dropdown color_">
-                        <a class="btn color_ text-secondary font-weight-bolder color_" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <p class="font-weight-bolder color_"><i class="fas fa-id-badge "></i>&nbsp;{% trans "Patient" %}</p>
+                <li class="nav-item mx-3 dropdown">
+                        <a class="btn  text-secondary  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {% trans "Patient" %}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <button type="button" onclick="location.href='{% url 'patsignIn' %}'" class="dropdown-item" >{% trans "Login" %}</button>
                         <div class="dropdown-divider"></div>
-                        <button type="button" onclick="location.href='{% url 'patsignup' %}'"class="dropdown-item" href="#">{% trans "Registration" %}</button>
+                        <button type="button" onclick="location.href='{% url 'patsignup' %}'" class="dropdown-item" >{% trans "Registration" %}</button>
                         </div>
-                      </div>
                 </li>
+                </ul>
         </div>
     </nav><div >
     <nav  aria-label="breadcrumb" >
