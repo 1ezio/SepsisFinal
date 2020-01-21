@@ -1,0 +1,96 @@
+body{
+    background: url(/static/img/tech-health.jpg) no-repeat ;
+    min-height: calc(100vh- 138px);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#bg{
+    background: url(/assets/img/health.jpg) no-repeat ;
+    min-height: calc(100vh- 138px);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+
+.bg{
+    border-radius: 40px;
+    -webkit-box-shadow: 0px 0px 26px 13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 26px 13px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 26px 13px rgba(0,0,0,0.75);
+    color: #000000;
+}
+.bg-purp{
+    background-color: rebeccapurple ;
+    opacity: 0.9;
+    
+}
+
+.bg-grn{
+    background-color: #DD7373;
+    opacity: 0.9;
+    
+}
+.crd{
+    border-radius: 20% !important;
+
+}
+
+
+
+.bg {
+   font-weight: bolder;
+}
+.bg-grn:hover{
+    background-color:  #EAD94C;
+}
+.bg-purp:hover{
+    background-color: #EAD94C;
+}
+
+
+h1{
+    -webkit-box-shadow: 0px 2px 116px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 116px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 116px -12px rgba(0,0,0,0.75);
+        border-radius: 50px;
+}
+#btk{
+    background-color: #fa8334;
+}
+
+body{
+    background: url(/static/img/lab.jpg) no-repeat ;
+    min-height: calc(100vh- 138px);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+  
+}
+
+
+
+/*.trans{
+    /*opacity: 0%;
+}*/
+
+
+footer{
+
+    top: 90vh;
+}
+
+#head{
+    align-items: center;
+    padding-left: 30%;
+    padding-right: 30%;
+}
