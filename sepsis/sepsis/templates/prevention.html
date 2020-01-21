@@ -74,10 +74,22 @@
          <video  class="border-dark border mx-1" width="65%" height="auto" controls autoplay>
             <source src="{% static 'video/prevention.mp4' %}" type="video/mp4"> </source>
          </video>
-         <div class=" col-3  mx-0" style="width:25%">
+        <div class=" col-3  mx-0 border border-dark" style="width:25%">
             <ul>
-               <li>1</li>
-               <li>2</li>
+                <li>1</li>
+                <li>2
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Vaccination Schedule 
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item bg-primary btn font-weight-bold" href="/assets/pdf/india-schedule.pdf">INDIA</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item btn " href="/assets/pdf/us-schedule.pdf">United States of America</a>
+                    </div>
+                </div>
+                </li>
+
                <li>3</li>
                <li>4</li>
                <li>5</li>
