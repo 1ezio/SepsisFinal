@@ -8,13 +8,13 @@ from django.contrib import auth
 import time
 from datetime import datetime, timezone
 import pytz
-#import numpy as np
-#import pickle
+import numpy as np
+import pickle
 
 
-#import pandas as pd
+import pandas as pd
 
-#import joblib
+import joblib
 
 
 config = {
@@ -129,7 +129,7 @@ def test(request):
                      'SBP':SBP,
                      'DBP':DBP,
                      'MAP':MAP,
-                     'O2Sat':O2Sat,
+                    'O2Sat':O2Sat,
                      'HR':HR,
                      'Temp':Temp,
                      'Resp':Resp
