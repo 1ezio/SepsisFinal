@@ -15,7 +15,7 @@ body{
 }
 
 #bg{
-    background: url(/assets/img/health.jpg) no-repeat ;
+    background: url(/assets/img/stetho.jpg) no-repeat ;
     min-height: calc(100vh- 138px);
     background-size: cover;
     background-position: center;
